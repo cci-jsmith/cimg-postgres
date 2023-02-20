@@ -6,12 +6,12 @@
 # specific reason to use a different one. This means January, April, July, or 
 # October.
 # Using November right now to include OpenSSL CVE fixes.
-FROM cimg/%%PARENT%%:2022.11
+FROM cimg/base:2022.11
 
 LABEL maintainer="Community & Partner Engineering Team <community-partner@circleci.com>"
 
-ENV PG_VER=%%VERSION_FULL%%
-ENV PG_MAJOR=%%VERSION_MAJOR%%
+ENV PG_VER=15.2
+ENV PG_MAJOR=15
 ENV POSTGRES_HOST_AUTH_METHOD=trust
 
 USER root
